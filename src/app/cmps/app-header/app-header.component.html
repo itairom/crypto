@@ -1,0 +1,33 @@
+<nav class="nav-container main-container ">
+    <div class="mobile-burger">
+        <menu-svg (click)="setIsMobile()"></menu-svg>
+    </div>
+
+    <div *ngIf="isMobile" class="mobile-menu slide-right">
+        <a (click)="setIsMobile()" routerLinkActive="active" routerLink="/home" [routerLinkActiveOptions]="{exact: true}">
+                <span class="">Home</span>
+        </a>
+        <a (click)="setIsMobile()" routerLinkActive="active-nav" routerLink="/item" [routerLinkActiveOptions]="{exact: true}">
+                <span class="">Items</span>
+        </a>
+    </div>
+    <div (click)="setIsMobile()" *ngIf="isMobile" class="background-menu">
+    </div>
+
+
+    <div class="flex left-nav">
+        <a routerLinkActive="active-nav" routerLink="/home" [routerLinkActiveOptions]="{exact: true}">
+            <div class="flex align-center">
+                <span class="nav-txt">Home</span>
+            </div>
+        </a>
+        <a routerLinkActive="active-nav" routerLink="/item" [routerLinkActiveOptions]="{exact: true}">
+            <div class="flex align-center">
+                <span class="nav-txt">Items</span>
+            </div>
+        </a>
+    </div>
+    <a routerLink="/home">
+        <img src="./assets/img/logo.png" alt="app-logo" title="Go home" />
+    </a>
+</nav>
