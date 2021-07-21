@@ -1,0 +1,17 @@
+.top-menu {
+    background-color: #2a283d;
+    display: flex;
+    font-size: 36px;
+    color: white;
+    justify-content: center;
+    width: 100vw;
+    div {
+        margin-top: 63px;
+        display: flex;
+        font-family: Verala-Round;
+        color: #c0c0c0;
+        span {
+            color: #fcfcfc;
+        }
+    }
+}
