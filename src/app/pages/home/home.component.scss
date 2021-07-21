@@ -1,0 +1,49 @@
+@import "../../../assets/style/setup/mixins";
+@import "../../../assets/style/setup/vars";
+
+.home-page {
+    .home-title {
+        display: flex;
+        font-size: 36px;
+        color: white;
+        div {
+            display: flex;
+            font-family: Verala-Round;
+            color: #c0c0c0;
+            span {
+                color: #fcfcfc;
+            }
+        }
+        p {
+            font-size: 28px;
+            font-family: Roboto;
+        }
+    }
+}
+
+.desktop-home {
+    display: flex;
+    justify-content: center;
+
+    img {
+        height: 641px;
+        width: 1213px;
+    }
+    @include for-mobile-layout {
+        display: none;
+    }
+}
+
+.mobile-home {
+    display: none;
+    justify-content: center;
+    div {
+        margin-top: 63px;
+    }
+
+
+    
+    @include for-mobile-layout {
+        display: flex;
+    }
+}
