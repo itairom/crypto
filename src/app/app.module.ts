@@ -21,7 +21,6 @@ import { ItemListComponent } from './cmps/item-list/item-list.component';
 import { ItemPreviewComponent } from './cmps/item-preview/item-preview.component';
 import { ItemEditComponent } from './cmps/item-edit/item-edit.component';
 import { MenuComponent } from './menu/menu.component';
-import { AppFooterComponent } from './cmps/app-footer/app-footer.component';
 import { AxiosService } from './services/axios.service';
 // import { MatIconModule } from '@angular/material/icon';
 // import { HttpClientModule } from '@angular/common/http';
@@ -36,7 +35,6 @@ import { AxiosService } from './services/axios.service';
     ItemListComponent,
     ItemPreviewComponent,
     MenuComponent,
-    AppFooterComponent,
   ],
   imports: [
     // HttpClientModule,
