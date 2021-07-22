@@ -36,12 +36,6 @@
 
 .mobile-home {
     display: none;
-    // justify-content: center;
-    // div {
-    //     margin-top: 63px;
-    // }
-
-
     
     @include for-mobile-layout {
         display: flex;

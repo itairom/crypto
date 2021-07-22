@@ -1,17 +1,55 @@
+@import "../../../assets/style/setup/mixins";
+@import "../../../assets/style/setup/vars";
+
 .top-menu {
     background-color: #2a283d;
     display: flex;
+    flex-direction: column;
     font-size: 36px;
     color: white;
     justify-content: center;
+    align-items: center;
     width: 100vw;
-    div {
+
+    .home-title {
         margin-top: 63px;
+    }
+    div {
         display: flex;
         font-family: Verala-Round;
         color: #c0c0c0;
         span {
             color: #fcfcfc;
+        }
+    }
+
+    .market {
+        display: flex;
+        flex-direction: column;
+        font-size: 22px;
+        p {
+            margin: 0;
+        }
+        div {
+            flex-direction: row;
+            align-items: center;
+            height: 28px;
+        }
+        img {
+            width: 31px;
+            height: 28px;
+            margin-right: 10px;
+        }
+    }
+
+    .market-up {
+        div p {
+            color: $clr3;
+        }
+    }
+    .market-down {
+        div p {
+            color: $clr4;
         }
     }
 }
