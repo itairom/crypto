@@ -22,8 +22,9 @@ import { ItemPreviewComponent } from './cmps/item-preview/item-preview.component
 import { ItemEditComponent } from './cmps/item-edit/item-edit.component';
 import { MenuComponent } from './menu/menu.component';
 import { AxiosService } from './services/axios.service';
-// import { MatIconModule } from '@angular/material/icon';
-// import { HttpClientModule } from '@angular/common/http';
+import { TopMenuComponent } from './cmps/top-menu/top-menu.component';
+import { AllCurrenciesComponent } from './cmps/all-currencies/all-currencies.component';
+import { TruckedCurrenciesComponent } from './cmps/trucked-currencies/trucked-currencies.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,9 @@ import { AxiosService } from './services/axios.service';
     ItemListComponent,
     ItemPreviewComponent,
     MenuComponent,
+    TopMenuComponent,
+    AllCurrenciesComponent,
+    TruckedCurrenciesComponent,
   ],
   imports: [
     // HttpClientModule,

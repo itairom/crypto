@@ -36,14 +36,10 @@
 
 .mobile-home {
     display: none;
-    justify-content: center;
-    div {
-        margin-top: 63px;
-    }
-
-
+    height: 100vh;
     
     @include for-mobile-layout {
         display: flex;
+        flex-direction: column;
     }
 }

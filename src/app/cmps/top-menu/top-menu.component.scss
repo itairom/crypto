@@ -1,0 +1,82 @@
+@import "../../../assets/style/setup/mixins";
+@import "../../../assets/style/setup/vars";
+
+.top-menu {
+    background-color: #2a283d;
+    display: flex;
+    flex-direction: column;
+    font-size: 36px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+    .home-title {
+        margin-top: 63px;
+    }
+    div {
+        display: flex;
+        font-family: Verala-Round;
+        color: #c0c0c0;
+        span {
+            color: #fcfcfc;
+        }
+    }
+
+    .market {
+        display: flex;
+        flex-direction: column;
+        font-size: 22px;
+        p {
+            margin: 0;
+        }
+        div {
+            flex-direction: row;
+            align-items: center;
+            height: 28px;
+        }
+        img {
+            width: 31px;
+            height: 28px;
+            margin-right: 10px;
+        }
+    }
+
+    .market-up {
+        div p {
+            color: $clr3;
+        }
+    }
+    .market-down {
+        div p {
+            color: $clr4;
+        }
+    }
+
+    .currencies-tabs {
+        display: flex;
+        // justify-content: space-evenly;
+        width: 100vw;
+
+        a {
+            justify-content: center;
+            margin-top: 34px;
+            font-size: 16px;
+            font-family: Robboto;
+            text-align: center;
+            text-decoration: none;
+            list-style: none;
+            color: #898989;
+            width: 50vw;
+            padding-bottom: 18px;
+            border-bottom: #898989 3px solid;
+            line-height :18.75px
+        }
+    }
+    .currencies-tabs {
+        .active-tab {
+            color: #d6d5da;
+            border-bottom: #d6d5da 3px solid;
+        }
+    }
+}

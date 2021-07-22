@@ -1,0 +1,25 @@
+<section class="top-menu">
+    <div class="home-title">
+        <div>SPRINT<span>CRYPTO</span></div>
+    </div>
+    <div class="market-change">
+        <div class="market market-up" *ngIf="this.checkMarketChange()">
+            <p>Market is up</p>
+            <div>
+                <img src="../../../assets/img/green_arrow.png" alt="up">
+                <p>{{this.marketChange}}</p>
+            </div>
+        </div>
+        <div class="market market-down" *ngIf="!this.checkMarketChange()">
+            <div>
+                <img src="../../../assets/img/red_arrow.png" alt="down">
+                <p>{{this.marketChange}}</p>
+            </div>
+            <p>Market is down</p>
+        </div>
+    </div>
+    <div class="currencies-tabs">
+        <a routerLinkActive="active-tab" routerLink="/home/all_currencies">All Currencies</a>
+        <a routerLinkActive="active-tab" routerLink="/home/tracked_currencies">Tracked Currencies</a>
+    </div>
+</section>
