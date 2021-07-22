@@ -36,8 +36,10 @@
 
 .mobile-home {
     display: none;
+    height: 100vh;
     
     @include for-mobile-layout {
         display: flex;
+        flex-direction: column;
     }
 }

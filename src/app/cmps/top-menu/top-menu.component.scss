@@ -52,4 +52,31 @@
             color: $clr4;
         }
     }
+
+    .currencies-tabs {
+        display: flex;
+        // justify-content: space-evenly;
+        width: 100vw;
+
+        a {
+            justify-content: center;
+            margin-top: 34px;
+            font-size: 16px;
+            font-family: Robboto;
+            text-align: center;
+            text-decoration: none;
+            list-style: none;
+            color: #898989;
+            width: 50vw;
+            padding-bottom: 18px;
+            border-bottom: #898989 3px solid;
+            line-height :18.75px
+        }
+    }
+    .currencies-tabs {
+        .active-tab {
+            color: #d6d5da;
+            border-bottom: #d6d5da 3px solid;
+        }
+    }
 }
