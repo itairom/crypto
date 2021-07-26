@@ -1,0 +1,38 @@
+@import "../../../assets/style/setup/mixins";
+@import "../../../assets/style/setup/vars";
+
+.market-change {
+    font-family: Roboto;
+    .market {
+        display: flex;
+        align-items: center;
+        // flex-direction: column;
+        font-size: 10px;
+        margin-right: 4px;
+        p {
+            margin: 0;
+        }
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 28px;
+        }
+        img {
+            width: 12px;
+            height: 7px;
+            margin-right: 10px;
+        }
+    }
+
+    .market-up {
+         p {
+            color: $clr3;
+        }
+    }
+    .market-down {
+         p {
+            color: $clr4;
+        }
+    }
+}

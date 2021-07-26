@@ -25,6 +25,8 @@ import { AxiosService } from './services/axios.service';
 import { TopMenuComponent } from './cmps/top-menu/top-menu.component';
 import { AllCurrenciesComponent } from './cmps/all-currencies/all-currencies.component';
 import { TruckedCurrenciesComponent } from './cmps/trucked-currencies/trucked-currencies.component';
+import { CurrencyPreviewComponent } from './cmps/currency-preview/currency-preview.component';
+import { MarketChangeComponent } from './cmps/market-change/market-change.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { TruckedCurrenciesComponent } from './cmps/trucked-currencies/trucked-cu
     TopMenuComponent,
     AllCurrenciesComponent,
     TruckedCurrenciesComponent,
+    CurrencyPreviewComponent,
+    MarketChangeComponent,
   ],
   imports: [
     // HttpClientModule,
