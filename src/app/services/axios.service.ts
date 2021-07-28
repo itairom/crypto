@@ -31,6 +31,15 @@ export class AxiosService {
             console.log('error');
         }
     }
+    async getCurrenciesList() {
+        try {
+            const resp = await axios.get('https://api.sprintt.co/crypto/currencies/list',options)
+            return resp.data.currencies_list
+        }
+        catch {
+            console.log('error');
+        }
+    }
 }
 
 

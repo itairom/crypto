@@ -19,7 +19,6 @@ export class MarketChangeComponent implements OnInit {
   }
 
   checkMarketChange = () => {
-    console.log(this.marketChange[0]);
     return this.marketChange[0] === '+' ? true : false
   }
 

@@ -1,4 +1,5 @@
 <section class="all-currencies">
-<p>all-currencies</p>    
-<currency-preview></currency-preview>
+    <p>all-currencies</p>
+    <!-- <p *ngIf="currencyList ">⏱ Loading...</p> -->
+    <currency-list [message]="message" [currencyList]="currencyList" ></currency-list>
 </section>
