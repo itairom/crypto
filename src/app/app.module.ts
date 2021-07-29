@@ -28,6 +28,7 @@ import { TruckedCurrenciesComponent } from './cmps/trucked-currencies/trucked-cu
 import { CurrencyPreviewComponent } from './cmps/currency-preview/currency-preview.component';
 import { MarketChangeComponent } from './cmps/market-change/market-change.component';
 import { CurrencyListComponent } from './cmps/currency-list/currency-list.component';
+import { CurrencyDetailsComponent } from './cmps/currency-details/currency-details.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { CurrencyListComponent } from './cmps/currency-list/currency-list.compon
     CurrencyPreviewComponent,
     MarketChangeComponent,
     CurrencyListComponent,
+    CurrencyDetailsComponent,
   ],
   imports: [
     // HttpClientModule,

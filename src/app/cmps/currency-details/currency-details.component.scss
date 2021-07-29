@@ -1,0 +1,18 @@
+.currency-details {
+    display: flex;
+    // justify-content: center;
+    margin-top: 63px;
+    .nav-logo {
+        font-family: Verala-Round;
+        color: #c0c0c0;
+        span {
+            color: #fcfcfc;
+        }
+    }
+    img{
+        margin-left: 32px;
+        margin-right: 100px;
+        width: 8px;
+        height: 15px;
+    }
+}
