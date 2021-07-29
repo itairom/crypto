@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Currency } from 'src/app/models/currency';
 
 @Component({
   selector: 'currency-preview',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CurrencyPreviewComponent implements OnInit {
 
+  @Input() item: Currency = null;
+
+
   constructor() { }
 
   ngOnInit(): void {
+    // console.log(this.item);
+    
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CoinServiceService } from 'src/app/services/coin-service.service';
 
 
@@ -9,7 +9,7 @@ import { CoinServiceService } from 'src/app/services/coin-service.service';
 })
 export class MarketChangeComponent implements OnInit {
   marketChange: any = ''
-
+  @Input() change: string = ''
 
   constructor(private coinServiceService: CoinServiceService) { }
 

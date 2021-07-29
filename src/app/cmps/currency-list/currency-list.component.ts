@@ -8,15 +8,12 @@ import { Currency } from 'src/app/models/currency';
 })
 export class CurrencyListComponent implements OnInit, AfterContentInit {
 
-  @Input() currencyList: Currency[] | null = [];
-  @Input() message: string
+  @Input() currencyList: Currency[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
-    if (!this.currencyList) return
-    if (!this.message) return
-    console.log(this.message);
+    // console.log(this.currencyList);
   }
   
   ngAfterContentInit():void{

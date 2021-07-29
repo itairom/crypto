@@ -11,6 +11,11 @@
     height: 84px;
     padding: 27px 17px;
     border-radius: 20px;
+    margin-bottom: 16px;
+
+    &:first-child{
+        margin-top: 16px;
+    }
 
     .left-preview{
         display: flex;
