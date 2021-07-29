@@ -1,0 +1,16 @@
+<div class="market-change">
+    <div class="market market-up" *ngIf="this.checkMarketChange()">
+        <!-- <div> -->
+        <img src="../../../assets/img/green_arrow.png" alt="up">
+        <!-- <p>{{this.marketChange}}</p> -->
+        <p>{{this.change}}</p>
+        <!-- </div> -->
+    </div>
+    <div class="market market-down" *ngIf="!this.checkMarketChange()">
+        <!-- <div> -->
+            <img src="../../../assets/img/red_arrow.png" alt="down">
+            <!-- <p>{{this.marketChange}}</p> -->
+            <p>{{this.change}}</p>
+        <!-- </div> -->
+    </div>
+</div>

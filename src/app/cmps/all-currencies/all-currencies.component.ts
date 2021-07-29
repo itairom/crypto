@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Currency } from 'src/app/models/currency';
+import { AxiosService } from 'src/app/services/axios.service';
 
 @Component({
   selector: 'all-currencies',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllCurrenciesComponent implements OnInit {
 
-  constructor() { }
+  currencyList: Currency[] = null
+  message: string = 'bloblo'
 
-  ngOnInit(): void {
+  constructor(
+    private axiosService: AxiosService
+  ) { }
+
+  async ngOnInit(): Promise<void> {
+    this.currencyList = await this.axiosService.getCurrenciesList()
+    console.log("🚀 ~ file: all-currencies.component.ts ~ line 17 ~ AllCurrenciesComponent ~ ngOnInit ~ currencyList", this.currencyList)
   }
 
 }

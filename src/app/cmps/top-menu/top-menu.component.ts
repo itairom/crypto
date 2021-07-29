@@ -13,17 +13,16 @@ export class TopMenuComponent implements OnInit {
 
   }
   
+  // ngOnInit(): void {
+
+  // }
   
   async ngOnInit(): Promise<void> {
     this.marketChange = await this.coinServiceService.getMarketChange()
-    
-    
     this.checkMarketChange()
   }
   
-  
   checkMarketChange =()=>{
-    console.log(this.marketChange[0]);
     return this.marketChange[0] ==='+' ? true :false
   }
 

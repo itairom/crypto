@@ -1,0 +1,15 @@
+<section class="currency-preview">
+<!-- <section *ngIf=item class="currency-preview"> -->
+    <div class="left-preview">
+        <img src={{item.image_url}} alt="icon">
+        <div class="currency-name">
+            <p>{{item.name}}</p>
+            <p>{{item.symbol}}</p>
+        </div>
+    </div>
+    <div class="right-preview">
+        <!-- <p>$56,847.24</p> -->
+        <p> <span>$</span>{{item.volume_24h_mil}}</p>
+        <market-change [change]="item.change_24h"></market-change>
+    </div>
+</section>
