@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'currency-details',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./currency-details.component.scss']
 })
 export class CurrencyDetailsComponent implements OnInit {
-
-  constructor() { }
+// @Input() state: any
+  constructor(private location:Location) { }
+  // const {item}:any = history.state
 
   ngOnInit(): void {
+    console.log(history.state);
+    console.log(this.location.getState())
   }
 
 }

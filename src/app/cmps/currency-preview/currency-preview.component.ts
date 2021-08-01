@@ -4,7 +4,8 @@ import { Currency } from 'src/app/models/currency';
 @Component({
   selector: 'currency-preview',
   templateUrl: './currency-preview.component.html',
-  styleUrls: ['./currency-preview.component.scss']
+  styleUrls: ['./currency-preview.component.scss'],
+  
 })
 export class CurrencyPreviewComponent implements OnInit {
 

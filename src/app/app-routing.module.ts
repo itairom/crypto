@@ -11,14 +11,17 @@ const routes: Routes = [
   {
     path: 'home', component: HomeComponent,
     children: [
-      { path: 'all_currencies', component: AllCurrenciesComponent },
+      { path: 'all_currencies', component: AllCurrenciesComponent,
+      // children:[
+      //   { path: 'details/:id', component: CurrencyDetailsComponent },
+
+      // ]
+    },
       { path: 'tracked_currencies', component: TruckedCurrenciesComponent }
     ]
   },
   { path: 'details/:id', component: CurrencyDetailsComponent },
 
-  // { path: 'home/all_currencies', component: AllCurrenciesComponent },
-  // { path: 'item', component: ItemAppComponent },
 ];
 
 @NgModule({
