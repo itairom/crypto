@@ -1,20 +1,16 @@
-<!-- <a routerLinkActive="active-tab" routerLink="/details/10" [state]="item"> -->
-<a routerLinkActive="active-tab" [routerLink]="['/details/'+item.currency_id]" [state]={item}>
-    
-<section class="currency-preview">
-<!-- <section *ngIf=item class="currency-preview"> -->
+<section *ngIf="item" class="currency-preview">
     <div class="left-preview">
-        <img src={{item.image_url}} alt="icon">
-        <div class="currency-name">
-            <p>{{item.name}}</p>
-            <p>{{item.symbol}}</p>
+            <a [routerLink]="['/details/'+item.currency_id]" [state]={item:item}>
+            <img src={{item?.image_url}} alt="icon">
+            <div class="currency-name">
+                <p>{{item?.name}}</p>
+                <p>{{item?.symbol}}</p>
+            </div>
+        </a>
         </div>
-    </div>
-    <div class="right-preview">
-        <!-- <p>$56,847.24</p> -->
-        <p> <span>$</span>{{item.volume_24h_mil}}</p>
-        <market-change [change]="item.change_24h"></market-change>
-
-    </div>
+        <div class="right-preview">
+            <p> <span>$</span>{{item?.volume_24h_mil}}</p>
+            <market-change [change]="item?.change_24h"></market-change>
+            
+        </div>
 </section>
-</a>

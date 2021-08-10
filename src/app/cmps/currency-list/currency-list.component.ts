@@ -6,18 +6,19 @@ import { Currency } from 'src/app/models/currency';
   templateUrl: './currency-list.component.html',
   styleUrls: ['./currency-list.component.scss']
 })
-export class CurrencyListComponent implements OnInit, AfterContentInit {
-
+export class CurrencyListComponent implements OnInit {
+  
   @Input() currencyList: Currency[] = [];
-
-  constructor() { }
-
-  ngOnInit(): void {
-    // console.log(this.currencyList);
+  
+  
+  constructor() { 
+    
   }
   
-  ngAfterContentInit():void{
-
+  ngOnInit(): void {
+    let i:number =10
+    
   }
+  
 
 }

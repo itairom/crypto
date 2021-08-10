@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { Currency } from 'src/app/models/currency';
+import { storageService } from 'src/app/services/async-storage.service';
+
 
 @Component({
   selector: 'currency-details',
@@ -7,13 +10,22 @@ import { Location } from '@angular/common';
   styleUrls: ['./currency-details.component.scss']
 })
 export class CurrencyDetailsComponent implements OnInit {
-// @Input() state: any
-  constructor(private location:Location) { }
-  // const {item}:any = history.state
+  // @Input() state: any
+  items: Currency = null
+  constructor() {
+
+  }
 
   ngOnInit(): void {
-    console.log(history.state);
-    console.log(this.location.getState())
+    if (history.state.item) {
+      this.items = history.state.item
+
+      localStorage.setItem('currItem', JSON.stringify(history.state.item))
+    }
+    else {
+      this.items = JSON.parse(localStorage.getItem('currItem'))
+    }
+
   }
 
 }

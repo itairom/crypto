@@ -1,9 +1,21 @@
 <section class="currency-details">
-    <img src="../../../assets/svg/back.svg" alt="back">
-    <div class="nav-logo">
-        <div>SPRINT<span>CRYPTO</span></div>
+    <div class="details-nav">
+        <a routerLink='/home' >
+            <img src="../../../assets/svg/back.svg" alt="back">
+        </a>
+
+        <div class="nav-logo">
+            <div>SPRINT<span>CRYPTO</span></div>
+        </div>
+    </div>
+    <div class="currency-name">
+        <p> {{items?.name}}</p>
+        <p> {{items?.symbol}}</p>
     </div>
     <div class="currency-inforamtion">
-        <!-- <p>{{}}</p> -->
+        <p> <span>$</span>{{items?.volume_24h_mil}}</p>
+        <market-change [change]="items?.change_24h"></market-change>
+
+
     </div>
 </section>

@@ -1,18 +1,50 @@
 .currency-details {
     display: flex;
-    // justify-content: center;
-    margin-top: 63px;
-    .nav-logo {
-        font-family: Verala-Round;
-        color: #c0c0c0;
-        span {
-            color: #fcfcfc;
+    flex-direction: column;
+    justify-content: center;
+
+    .details-nav {
+        display: flex;
+        flex-direction: row;
+        // justify-content: center;
+        margin-top: 63px;
+        .nav-logo {
+            font-family: Verala-Round;
+            color: #c0c0c0;
+            span {
+                color: #fcfcfc;
+            }
+        }
+        img {
+            margin-left: 32px;
+            margin-right: 100px;
+            width: 8px;
+            height: 15px;
         }
     }
-    img{
-        margin-left: 32px;
-        margin-right: 100px;
-        width: 8px;
-        height: 15px;
+    .currency-name {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 37px;
+        p:first-child {
+            margin-right: 12px;
+        }
+    }
+
+    .currency-inforamtion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 37px;
+        .market{
+            font-size: 24px;
+
+        }
+        p:first-child {
+            margin-right: 23px;
+            font-size: 34px;
+        }
     }
 }

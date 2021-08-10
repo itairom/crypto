@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
+
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -26,10 +27,12 @@ import { CurrencyPreviewComponent } from './cmps/currency-preview/currency-previ
 import { MarketChangeComponent } from './cmps/market-change/market-change.component';
 import { CurrencyListComponent } from './cmps/currency-list/currency-list.component';
 import { CurrencyDetailsComponent } from './cmps/currency-details/currency-details.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   exports:[
-    TopMenuComponent
+    TopMenuComponent,
+    // AppRoutingModule
   ],
   declarations: [
     AppComponent,
@@ -48,7 +51,7 @@ import { CurrencyDetailsComponent } from './cmps/currency-details/currency-detai
   imports: [
     // HttpClientModule,
     // MatIconModule,
-    
+    CommonModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,

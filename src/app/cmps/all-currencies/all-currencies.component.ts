@@ -17,6 +17,7 @@ export class AllCurrenciesComponent implements OnInit {
   ) { }
 
   async ngOnInit(): Promise<void> {
+
     this.currencyList = await this.axiosService.getCurrenciesList()
     console.log("🚀 ~ file: all-currencies.component.ts ~ line 17 ~ AllCurrenciesComponent ~ ngOnInit ~ currencyList", this.currencyList)
   }

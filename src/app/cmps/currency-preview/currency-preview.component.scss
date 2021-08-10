@@ -18,6 +18,11 @@
     }
 
     .left-preview{
+        a{
+            display: flex;
+            color: $clr2;
+            text-decoration: none;
+        }
         display: flex;
         align-items: center;
 
