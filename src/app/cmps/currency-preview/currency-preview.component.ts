@@ -24,7 +24,6 @@ console.log('preview constructor');
 
   ngOnInit(): void {
     if (!this.item) return
-    console.log(this.item);
 
   }
 
