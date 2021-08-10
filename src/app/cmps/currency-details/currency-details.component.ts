@@ -12,20 +12,28 @@ import { storageService } from 'src/app/services/async-storage.service';
 export class CurrencyDetailsComponent implements OnInit {
   // @Input() state: any
   items: Currency = null
+  isTracked: Boolean = null
+
+
   constructor() {
 
+  }
+
+  setIsTracked() {
+    this.isTracked = !this.isTracked
   }
 
   ngOnInit(): void {
     if (history.state.item) {
       this.items = history.state.item
-
+      
       localStorage.setItem('currItem', JSON.stringify(history.state.item))
     }
     else {
       this.items = JSON.parse(localStorage.getItem('currItem'))
     }
-
+    
+    this.isTracked = this.items?.is_tracked ? true : false
   }
 
 }

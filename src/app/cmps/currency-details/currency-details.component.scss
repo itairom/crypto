@@ -38,13 +38,30 @@
         align-items: center;
         justify-content: center;
         margin-top: 37px;
-        .market{
+        .market {
             font-size: 24px;
-
         }
         p:first-child {
             margin-right: 23px;
             font-size: 34px;
+        }
+    }
+
+    .tracked-btn {
+
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        user-select: none;
+        p {
+            border: 2px solid #686cd6;
+            min-width: 327px;
+            padding: 14px 24px 14px 33px;
+            border-radius: 50px;
+
+            &.is-tracked {
+                background-color: #686cd6;
+            }
         }
     }
 }
