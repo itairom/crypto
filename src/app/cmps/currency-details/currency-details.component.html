@@ -1,0 +1,25 @@
+<section class="currency-details">
+    <div class="details-nav">
+        <a routerLink='/home/all_currencies' >
+            <img src="../../../assets/svg/back.svg" alt="back">
+        </a>
+
+        <div class="nav-logo">
+            <div>SPRINT<span>CRYPTO</span></div>
+        </div>
+    </div>
+    <div class="currency-name">
+        <p> {{items?.name}}</p>
+        <p> {{items?.symbol}}</p>
+    </div>
+    <div class="currency-inforamtion">
+        <p> <span>$</span>{{items?.volume_24h_mil}}</p>
+        <market-change [change]="items?.change_24h"></market-change>
+
+
+    </div>
+    <div (click)="setIsTracked()" class="tracked-btn">
+         <p *ngIf="!this.isTracked">Add to tracked currencies list</p>
+        <p class="is-tracked" *ngIf="this.isTracked">Remove From tracked currencies list</p>
+    </div>
+</section>

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
+
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -17,9 +18,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { ItemAppComponent } from './pages/item-app/item-app.component';
 
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
-import { ItemListComponent } from './cmps/item-list/item-list.component';
-import { ItemPreviewComponent } from './cmps/item-preview/item-preview.component';
-import { ItemEditComponent } from './cmps/item-edit/item-edit.component';
 import { MenuComponent } from './menu/menu.component';
 import { AxiosService } from './services/axios.service';
 import { TopMenuComponent } from './cmps/top-menu/top-menu.component';
@@ -28,16 +26,19 @@ import { TruckedCurrenciesComponent } from './cmps/trucked-currencies/trucked-cu
 import { CurrencyPreviewComponent } from './cmps/currency-preview/currency-preview.component';
 import { MarketChangeComponent } from './cmps/market-change/market-change.component';
 import { CurrencyListComponent } from './cmps/currency-list/currency-list.component';
+import { CurrencyDetailsComponent } from './cmps/currency-details/currency-details.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
+  exports:[
+    TopMenuComponent,
+    // AppRoutingModule
+  ],
   declarations: [
     AppComponent,
     HomeComponent,
     ItemAppComponent,
-    ItemEditComponent,
     AppHeaderComponent,
-    ItemListComponent,
-    ItemPreviewComponent,
     MenuComponent,
     TopMenuComponent,
     AllCurrenciesComponent,
@@ -45,11 +46,12 @@ import { CurrencyListComponent } from './cmps/currency-list/currency-list.compon
     CurrencyPreviewComponent,
     MarketChangeComponent,
     CurrencyListComponent,
+    CurrencyDetailsComponent,
   ],
   imports: [
     // HttpClientModule,
     // MatIconModule,
-    
+    CommonModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,
