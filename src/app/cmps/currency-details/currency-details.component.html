@@ -22,4 +22,9 @@
          <p *ngIf="!this.isTracked">Add to tracked currencies list</p>
         <p class="is-tracked" *ngIf="this.isTracked">Remove From tracked currencies list</p>
     </div>
+    <div class="history-btns">
+        <div [ngClass]="activeBtn==='day' ? 'active-btn':''" (click)="setActiveBtn('day')" class="day-btn">1 Day</div>
+        <div [ngClass]="activeBtn==='month' ? 'active-btn':''" (click)="setActiveBtn('month')" class="month-btn">1 Month</div>
+        <div [ngClass]="activeBtn==='year' ? 'active-btn':''" (click)="setActiveBtn('year')" class="year-btn">1 Year</div>
+    </div>
 </section>

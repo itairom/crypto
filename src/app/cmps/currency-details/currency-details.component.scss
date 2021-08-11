@@ -1,3 +1,6 @@
+@import "../../../assets/style/setup/mixins";
+@import "../../../assets/style/setup/vars";
+
 .currency-details {
     display: flex;
     flex-direction: column;
@@ -48,7 +51,6 @@
     }
 
     .tracked-btn {
-
         display: flex;
         justify-content: center;
         text-align: center;
@@ -61,6 +63,27 @@
 
             &.is-tracked {
                 background-color: #686cd6;
+            }
+        }
+    }
+
+    .history-btns {
+        display: flex;
+        // flex-direction: row;
+        margin-top: 67px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 38px;
+
+        div {
+            width: 96px;
+            border-radius: 50px;
+            padding: 9px 0;
+            text-align: center;
+            background-color: #20232b;
+            // color: $clr1;
+            &.active-btn{
+            border: #D6D5DA 1px solid;    
             }
         }
     }
