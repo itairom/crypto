@@ -1,6 +1,6 @@
 <section class="currency-details">
     <div class="details-nav">
-        <a routerLink='/home' >
+        <a routerLink='/home/all_currencies' >
             <img src="../../../assets/svg/back.svg" alt="back">
         </a>
 
@@ -19,8 +19,6 @@
 
     </div>
     <div (click)="setIsTracked()" class="tracked-btn">
-         <!-- <p *ngIf="!items.is_tracked">Add to tracked currencies list</p>
-        <p *ngIf="items.is_tracked">Remove From tracked currencies list</p> -->
          <p *ngIf="!this.isTracked">Add to tracked currencies list</p>
         <p class="is-tracked" *ngIf="this.isTracked">Remove From tracked currencies list</p>
     </div>
