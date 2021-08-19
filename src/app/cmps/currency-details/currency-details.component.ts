@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit ,OnChanges} from '@angular/core';
 import { Location } from '@angular/common';
 import { Currency } from 'src/app/models/currency';
 import { storageService } from 'src/app/services/async-storage.service';
@@ -11,22 +11,20 @@ import { AxiosService } from 'src/app/services/axios.service';
   styleUrls: ['./currency-details.component.scss']
 })
 export class CurrencyDetailsComponent implements OnInit {
-  // @Input() state: any
   items: Currency = null
   isTracked: boolean = null
   activeBtn: string = null
-
+  chartData:any =null
   constructor(
-    private axiosService: AxiosService
+    private axiosService: AxiosService) { }
 
-  ) {
-
+  setActiveBtn(status: string) {
+    this.activeBtn = status
+    this.fetchChartData(status)
   }
 
-  setActiveBtn(status:string) {
-    console.log(status);
-    
-    this.activeBtn = status
+  async fetchChartData(time){
+   this.chartData= await this.axiosService.FetchHistory(this.items.currency_id,time)
   }
 
   async setIsTracked() {
@@ -34,19 +32,20 @@ export class CurrencyDetailsComponent implements OnInit {
     await this.axiosService.setIsTracked(this.isTracked, this.items.currency_id)
   }
 
+
+
   ngOnInit(): void {
-    console.log(history.state.item);
 
     if (history.state.item) {
       this.items = history.state.item
-
       localStorage.setItem('currItem', JSON.stringify(history.state.item))
     }
     else {
       this.items = JSON.parse(localStorage.getItem('currItem'))
     }
-
     this.isTracked = this.items?.is_tracked ? true : false
-  }
 
+    this.fetchChartData('1D')
+  }
+  
 }

@@ -31,14 +31,30 @@ export class AxiosService {
             console.log('error');
         }
     }
+    async FetchHistory(currencyId, time) {
+        try {
+            let status = '1D'
+            if (time === 'year') {
+                status = "1Y"
+            }
+            else if (time === 'month') {
+                status = "1M"
+            }
+            const resp = await axios.get(`https://api.sprintt.co/crypto/currencies/history/${currencyId}?time_scope=${status}`, options)
+            return resp.data.quotes_data
+        }
+        catch {
+            console.log('error');
+        }
+    }
     async setIsTracked(status, id) {
         try {
-            console.log(status,id);
-            
+            console.log(status, id);
+
             let bool = status ? true : false
-            const resp =  axios.post(`https://api.sprintt.co/crypto/currencies/tracked_currencies/${id}?status=${bool}`,{}, options)
-            console.log(resp,'POST');
-            
+            const resp = axios.post(`https://api.sprintt.co/crypto/currencies/tracked_currencies/${id}?status=${bool}`, {}, options)
+            console.log(resp, 'POST');
+
         }
         catch {
             console.log('error');
