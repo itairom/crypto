@@ -26,9 +26,11 @@ export class ChartComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     // console.log(changes)
-    console.log('changes')
     this.localChartData = changes.chartData.currentValue
+    console.log(this.myChart)
+    if(this.myChart!==null){
       this.myChart.destroy()
+    }
     
     this.setChart()
   }
@@ -41,8 +43,7 @@ export class ChartComponent implements OnInit, OnChanges {
      this.myChart = new Chart("chart", {
       type: 'line',
       data: {
-        // labels: _date, //['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        labels: _date, //['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: _date, 
 
         datasets: [{
           pointRadius: 0,

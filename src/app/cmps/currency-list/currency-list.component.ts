@@ -7,21 +7,15 @@ import { BrowserModule } from '@angular/platform-browser'
   selector: 'currency-list',
   templateUrl: './currency-list.component.html',
   styleUrls: ['./currency-list.component.scss'],
-  
+
 })
 export class CurrencyListComponent implements OnInit {
-  
+
   @Input() currencyList: Currency[] = [];
-  
-  
-  constructor() { 
-    
-  }
-  
+
+  constructor() { }
+
   ngOnInit(): void {
-    let i:number =10
-    
   }
-  
 
 }

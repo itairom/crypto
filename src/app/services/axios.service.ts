@@ -33,12 +33,12 @@ export class AxiosService {
     }
     async FetchHistory(currencyId, time) {
         try {
-            let status = '1D'
+            let status = '1M'
             if (time === 'year') {
                 status = "1Y"
             }
-            else if (time === 'month') {
-                status = "1M"
+            else if (time === 'day') {
+                status = "1D"
             }
             const resp = await axios.get(`https://api.sprintt.co/crypto/currencies/history/${currencyId}?time_scope=${status}`, options)
             return resp.data.quotes_data

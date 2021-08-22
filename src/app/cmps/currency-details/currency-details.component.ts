@@ -13,7 +13,7 @@ import { AxiosService } from 'src/app/services/axios.service';
 export class CurrencyDetailsComponent implements OnInit {
   items: Currency = null
   isTracked: boolean = null
-  activeBtn: string = null
+  activeBtn: string = 'month'
   chartData:any =null
   constructor(
     private axiosService: AxiosService) { }
