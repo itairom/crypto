@@ -18,8 +18,20 @@ export class CurrencyPreviewComponent implements OnInit {
     private appRoutingModule: AppRoutingModule
   ) {
 
+    
   }
+  getFormatPrice(){
+    
+    if(this.item.volume_24h_mil){
+      return  new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 6 }).format(this.item.volume_24h_mil)
+    }
+    else return  new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 6 }).format(this.item.price)
+   
+  }
+
   ngOnInit(): void {
+    console.log(this.item);
+    
     if (!this.item) return
   }
 

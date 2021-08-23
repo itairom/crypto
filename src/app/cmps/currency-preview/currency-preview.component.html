@@ -9,7 +9,8 @@
         </a>
         </div>
         <div class="right-preview">
-            <p> <span>$</span>{{item?.volume_24h_mil}}</p>
+            <!-- <p *ngIf="item.volume_24h_mil"> $ {{item?.volume_24h_mil}}</p> -->
+            <p> $ {{getFormatPrice()}}</p>
             <market-change [stockChange]="item?.change_24h"></market-change>
             
         </div>
