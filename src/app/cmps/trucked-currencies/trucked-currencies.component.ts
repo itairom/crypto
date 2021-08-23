@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Currency } from 'src/app/models/currency';
+
+import { AxiosService } from 'src/app/services/axios.service';
 
 @Component({
   selector: 'trucked-currencies',
@@ -6,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trucked-currencies.component.scss']
 })
 export class TruckedCurrenciesComponent implements OnInit {
+  truckedCurrencies:  Currency[] = null
 
-  constructor() { }
+  constructor(
+    private axiosService: AxiosService
+  ) { }
 
-  ngOnInit(): void {
+
+  async ngOnInit(): Promise<void> {
+    this.truckedCurrencies = await this.axiosService.getTruckedCurrenciesList()
   }
 
 }

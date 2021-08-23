@@ -14,11 +14,8 @@ export class MarketChangeComponent implements OnInit {
   constructor(private coinServiceService: CoinServiceService) { }
 
   async ngOnInit(): Promise<void> {
-    // console.log(this.stockChange);
-    
     this.marketChange = await this.coinServiceService.getMarketChange()
     this.checkMarketChange()
-    console.log(this.marketChange);
   }
 
   checkMarketChange = () => {

@@ -18,16 +18,12 @@ export class ChartComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('init');
-    
     this.localChartData = this.chartData
     this.setChart()
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    // console.log(changes)
     this.localChartData = changes.chartData.currentValue
-    console.log(this.myChart)
     if(this.myChart!==null){
       this.myChart.destroy()
     }

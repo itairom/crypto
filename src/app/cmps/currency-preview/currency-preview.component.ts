@@ -1,27 +1,24 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, NgModule } from '@angular/core';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { Currency } from 'src/app/models/currency';
-import '@angular/compiler';
-
+import { CurrencyListComponent } from '../currency-list/currency-list.component';
 
 @Component({
   selector: 'currency-preview',
   templateUrl: './currency-preview.component.html',
   styleUrls: ['./currency-preview.component.scss'],
-  
 })
+
 export class CurrencyPreviewComponent implements OnInit {
 
   @Input() item: Currency = null;
 
-
   constructor(
+    private currencyListComponent:CurrencyListComponent,
     private appRoutingModule: AppRoutingModule
-    ) {
-console.log('preview constructor');
+  ) {
 
   }
-
   ngOnInit(): void {
     if (!this.item) return
   }

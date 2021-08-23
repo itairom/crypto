@@ -30,7 +30,7 @@ import { CurrencyDetailsComponent } from './cmps/currency-details/currency-detai
 import { CommonModule } from '@angular/common';
 import { ChartComponent } from './cmps/chart/chart.component'
 
-;
+
 
 @NgModule({
   exports:[
