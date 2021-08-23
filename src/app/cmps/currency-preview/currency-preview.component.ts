@@ -29,9 +29,7 @@ export class CurrencyPreviewComponent implements OnInit {
    
   }
 
-  ngOnInit(): void {
-    console.log(this.item);
-    
+  ngOnInit(): void {    
     if (!this.item) return
   }
 
