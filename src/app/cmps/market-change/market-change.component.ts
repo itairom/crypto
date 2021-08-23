@@ -9,7 +9,7 @@ import { CoinServiceService } from 'src/app/services/coin-service.service';
 })
 export class MarketChangeComponent implements OnInit {
   marketChange: any = ''
-  @Input() change: string = ''
+  @Input() stockChange: string = ''
 
   constructor(private coinServiceService: CoinServiceService) { }
 
@@ -20,6 +20,9 @@ export class MarketChangeComponent implements OnInit {
 
   checkMarketChange = () => {
     return this.marketChange[0] === '+' ? true : false
+  }
+  checkStockChange = () => {
+    return this.stockChange[0] === '+' ? true : false
   }
 
 }

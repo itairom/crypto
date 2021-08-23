@@ -5,6 +5,7 @@ import { CurrencyDetailsComponent } from './cmps/currency-details/currency-detai
 import { TruckedCurrenciesComponent } from './cmps/trucked-currencies/trucked-currencies.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ItemAppComponent } from './pages/item-app/item-app.component';
+import { CommonModule } from "@angular/common";
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -12,10 +13,6 @@ const routes: Routes = [
     path: 'home', component: HomeComponent,
     children: [
       { path: 'all_currencies', component: AllCurrenciesComponent,
-      // children:[
-      //   { path: 'details/:id', component: CurrencyDetailsComponent },
-
-      // ]
     },
       { path: 'tracked_currencies', component: TruckedCurrenciesComponent }
     ]
@@ -25,7 +22,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forRoot(routes, { useHash: true }),CommonModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

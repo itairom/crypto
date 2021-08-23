@@ -25,6 +25,12 @@
     "@ngrx/store-devtools": "^10.1.2",
     "angular-cli-ghpages": "^1.0.0-rc.1",
     "axios": "^0.21.1",
+    "chart.js": "^3.5.0",
+    "chartjs-adapter-date-fns": "^2.0.0",
+    "chartjs-adapter-moment": "^1.0.0",
+    "moment": "^2.29.1",
+    "ng2-charts": "^2.4.3",
+    "ngx-echarts": "^7.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

@@ -1,1 +1,5 @@
-<p>trucked-currencies works!</p>
+<section class="trucked-currencies">
+    <p *ngIf="this.truckedCurrencies">
+        <currency-list  [currencyList]="truckedCurrencies" ></currency-list>
+    </p>
+</section>

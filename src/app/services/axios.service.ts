@@ -12,16 +12,6 @@ const options = {
 export class AxiosService {
     constructor() { }
 
-    async yesNoTest() {
-        try {
-            const resp = await axios.get('https://yesno.wtf/api')
-            return resp.data
-        }
-        catch {
-            console.log('error');
-        }
-    }
-
     async FetchMarketChange() {
         try {
             const resp = await axios.get('https://api.sprintt.co/crypto/currencies/market_change', options)
@@ -31,14 +21,26 @@ export class AxiosService {
             console.log('error');
         }
     }
+    async FetchHistory(currencyId, time) {
+        try {
+            let status = '1M'
+            if (time === 'year') {
+                status = "1Y"
+            }
+            else if (time === 'day') {
+                status = "1D"
+            }
+            const resp = await axios.get(`https://api.sprintt.co/crypto/currencies/history/${currencyId}?time_scope=${status}`, options)
+            return resp.data.quotes_data
+        }
+        catch {
+            console.log('error');
+        }
+    }
     async setIsTracked(status, id) {
         try {
-            console.log(status,id);
-            
             let bool = status ? true : false
-            const resp =  axios.post(`https://api.sprintt.co/crypto/currencies/tracked_currencies/${id}?status=${bool}`,{}, options)
-            console.log(resp,'POST');
-            
+            const resp = axios.post(`https://api.sprintt.co/crypto/currencies/tracked_currencies/${id}?status=${bool}`, {}, options)
         }
         catch {
             console.log('error');
@@ -47,6 +49,16 @@ export class AxiosService {
     async getCurrenciesList() {
         try {
             const resp = await axios.get('https://api.sprintt.co/crypto/currencies/list', options)
+            return resp.data.currencies_list
+        }
+        catch {
+            console.log('error');
+        }
+    }
+    async getTruckedCurrenciesList() {
+        
+        try {
+            const resp = await axios.get('https://api.sprintt.co/crypto/currencies/list?tracked_only=true&limit=100&offset=0', options)
             return resp.data.currencies_list
         }
         catch {

@@ -28,6 +28,9 @@ import { MarketChangeComponent } from './cmps/market-change/market-change.compon
 import { CurrencyListComponent } from './cmps/currency-list/currency-list.component';
 import { CurrencyDetailsComponent } from './cmps/currency-details/currency-details.component';
 import { CommonModule } from '@angular/common';
+import { ChartComponent } from './cmps/chart/chart.component'
+
+
 
 @NgModule({
   exports:[
@@ -47,6 +50,7 @@ import { CommonModule } from '@angular/common';
     MarketChangeComponent,
     CurrencyListComponent,
     CurrencyDetailsComponent,
+    ChartComponent,
   ],
   imports: [
     // HttpClientModule,
